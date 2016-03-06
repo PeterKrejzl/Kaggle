@@ -1,4 +1,6 @@
 # Kaggle Competitions
+### profile = https://www.kaggle.com/pkrejzl
+
 ## Home Depot Product Search Relevance
 https://www.kaggle.com/c/home-depot-product-search-relevance
 
