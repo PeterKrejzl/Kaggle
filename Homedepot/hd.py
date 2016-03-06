@@ -44,9 +44,9 @@ def preprocess_input_data(lemmatize = 1, remove_numbers = 1, remove_no_chars = 1
         PREPROCESSING
     '''  
     logging.log(logging.INFO, 'Preprocessing input data - start')
-    train_data_raw = '/Users/peterkrejzl/Documents/PHD/Kaggle/Homedepot/data/train.csv'
-    test_data_raw = '/Users/peterkrejzl/Documents/PHD/Kaggle/Homedepot/data/test.csv'
-    desc = '/Users/peterkrejzl/Documents/PHD/Kaggle/Homedepot/data/product_descriptions.csv'
+    train_data_raw = 'data/train.csv'
+    test_data_raw = 'data/test.csv'
+    desc = 'data/product_descriptions.csv'
     
     
     train_data = pd.read_csv(train_data_raw, encoding="ISO-8859-1")
@@ -156,7 +156,7 @@ def preprocess_input_data(lemmatize = 1, remove_numbers = 1, remove_no_chars = 1
 #print(test_data.shape)
 #pprint(train_data.columns)
 
-load_saved_data = 1
+load_saved_data = 0
 final_run = 1
 
 
