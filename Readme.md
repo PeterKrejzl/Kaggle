@@ -12,3 +12,8 @@ https://www.kaggle.com/c/forest-cover-type-prediction
 Best Accuracy = 0.78893
 
 Finished 278th / 1694
+
+## Titanic
+https://www.kaggle.com/c/titanic
+
+Few lines of code: 0.71292
