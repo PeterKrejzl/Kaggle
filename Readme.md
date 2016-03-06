@@ -16,4 +16,4 @@ Finished 278th / 1694
 ## Titanic
 https://www.kaggle.com/c/titanic
 
-Few lines of code: 0.71292
+Few lines of code: 0.77990

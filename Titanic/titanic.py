@@ -71,8 +71,15 @@ def convert_age(str):
     if np.isnan(str):
         return(0.0)
     else:
-        return(float(str))
-    
+        if str < 20:
+            return 1
+        elif str < 50 and str >= 20:
+            return 2
+        elif str >= 50:
+            return 3
+        
+        
+
 # test_data['product_description'] = test_data['product_description'].map(lambda x : str_lemm(x))
         
 X_train['SexBit'] = X_train['Sex'].map(lambda x : convert_sex(x))
@@ -84,12 +91,14 @@ X_test = X_test.drop(['Sex'], axis=1)
 X_test['Age'] = X_test['Age'].map(lambda x : convert_age(x))
 
 
+min_age, max_age = np.min(X_train['Age']), np.max(X_train['Age'])
+print('Min age = %s, Max age = %s' % (min_age, max_age))
 
 pprint(X_train.head(10))
 
 
 
-pred = RandomForestClassifier(n_estimators=5000, n_jobs=6, verbose=3)
+pred = RandomForestClassifier(n_estimators=5000, n_jobs=6, verbose=0)
 pred.fit(X_train, Y_train)
 
 result = pred.predict(X_test)
